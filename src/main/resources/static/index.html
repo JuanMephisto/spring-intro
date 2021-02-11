@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Spring intro</title>
+</head>
+<body>
+
+<h2>Enkelt webprogram</h2>
+Skriv inn ditt navn: <input type="text" id="navn">
+<button onclick="hallo()">Trykk her</button>
+<div id="resultat"></div>
+
+<script type="application/javascript">
+    function hallo() {
+      const url = "/?navn=" + $("#navn").val();
+      $.get(url,function (data){
+         $("#resultat").html(data);
+      });
+    }
+</script>
+</body>
+</html>
